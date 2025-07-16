@@ -191,3 +191,53 @@ The proposal assumes the backend APIs are already in place (or mocked).
 UI Library: React Native Paper or NativeBase for faster design.
 
 Optional PWA fallback for non-native environments.
+
+---------------Flow Diagram---------------
+START
+  ↓
+[ Splash / Launch App ]
+  ↓
+[ Check User Authenticated? ]
+  → No → [ Login Screen (OTP via Firebase) ]
+             ↓
+          [ Verify OTP ]
+             ↓
+          [ Store Session Token ]
+             ↓
+          [ Navigate to Store Locator ]
+  → Yes → [ Store Locator Screen ]
+             ↓
+          [ Fetch Current Location + Store List ]
+             ↓
+     ┌──────────────────────────────┐
+     │ FlatList of Stores + MapView │
+     └──────────────────────────────┘
+             ↓
+     [ User Searches for Store ]
+         ↓         ↓
+  [ Filter by Name ]  [ Show Suggestions A→Z ]
+             ↓
+        [ Tap on Store ]
+             ↓
+     [ Store Detail Screen ]
+         ↓     ↓       ↓
+     Name   Address   Distance from User
+                  ↓
+           [ View on Map ]
+
+OPTIONAL:
+ ↓
+[ Browse Products ]
+  ↓
+[ Add to Cart ]
+  ↓
+[ View Cart ]
+  ↓
+[ Checkout + Payment ]
+  ↓
+[ Place Order ]
+  ↓
+[ Show Order History ]
+
+END
+
