@@ -31,7 +31,7 @@ Expo CLI: npm install -g expo-cli
 Android/iOS simulator or physical device (with Expo Go app)
 
 1. Clone the Repository
-git clone https://github.com/akash2899/YOUR_REPO_NAME.git
+git clone (https://github.com/akash2899/homerun-assignment)
 cd YOUR_REPO_NAME/technical-exercise
 
 2. ⚙️ Start the Backend
